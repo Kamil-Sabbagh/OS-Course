@@ -7,5 +7,5 @@ single-level linear page table ?
 single page size = 8 kb = 8 * 1024 = 2 ^ 13 B
 offset size  = log(2 ^ 13 ) ( with base 2 ) = 13 bits 
 number of the virtual pages = ( 2 ^ 16 ) / ( 2 ^ 13 )  = 2 ^ 3 = 8 pages 
-therefoe we will need 8 entries  
+therefore we will need 8 entries  
 
