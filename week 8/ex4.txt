@@ -1,0 +1,10 @@
+iteration 0:  11364 
+iteration 1:  21636 
+iteration 2:  31932 
+iteration 3:  42228 
+iteration 4:  52524 
+iteration 5:  62820 
+iteration 6:  72852 
+iteration 7:  83148 
+iteration 8:  93444 
+iteration 9:  103740 

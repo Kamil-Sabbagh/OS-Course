@@ -1,0 +1,5 @@
+Virtual address: 
+it is an address used by processes and it is used as a reference point for the process in the physical memory
+
+physical address :
+it is an address that is assigned in RAM to some memory blocks in order to access a specific storage cell of the memory or a register 
