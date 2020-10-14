@@ -1,0 +1,20 @@
+In order to make hit/miss ration higher win need to increase the number of hits, and decrease the number of misses.
+The best way is the following, lets say that there are N page frames. Then for K (number of pages) = 4N for example
+We will construct a sequence like this: q q q q q q ... q q q d d d ... d d d x x x ... x x x h h h ... h h h
+Where `q`s are some numbers from 0 to N-1, `d`s are some numbers from N to 2N-1, `x`s are from 2N to 3N-1 and `h`s are from 3N to 4N-1
+Each q, d, x, h is different, symbolic representation is for convenience.
+
+Ex.
+N = 10, K = 20
+2 3 5 1 2 3 5 1 8 7 8 3 4 1 6 4 3 2 3 1 9 2 3 14 18 17 16 12 11 10 19 18 17 13 15 13 14 13 12 15 18 17 16 15 19 18 17 16 13 15 13 15
+You get the idea.                             ^
+				here you can see the change
+
+
+For the low hit/miss we just do the opposite, distribute the pages in the sequence the way that the gap between the hits is
+bigger than the number of page frames.
+
+Ex.
+N = 5, K = 20
+
+0 1 2 3 4 5 6 0 1 2 3 4 5 6 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 11 12 13 14 15 16 17 18 19
