@@ -2,10 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define DEFAULT_FILEPATH "input.txt"
-#define REF_HIT 1
-#define REF_MISS 0
-
 typedef unsigned int uint;
 
 typedef struct {
@@ -13,38 +9,14 @@ typedef struct {
 	uint lutime;	
 } PAGE;
 
-void error(char* msg) {
-	printf("%s\n", msg);
-	exit(1);
-}
 
-int handle_ref(PAGE* arr, uint length, uint pageid, uint tick) {
-	PAGE page;
-	page.pageid = pageid;
-	page.lutime = tick;
-	
-	for (int i = 0; i < length; i++) {
-		if (arr[i].pageid == -1) { 
-			arr[i] = page;
-			return REF_MISS;
-		}
+int handle_ref(PAGE* arr, uint length, uint pageid, uint tick) ; 
 
-		if (arr[i].pageid == page.pageid) {
-			arr[i] = page;
-			return REF_HIT;
-		}
-	}
-
-	int ri = 0;
-	for (int i = 1; i < length; i++) {
-		if (arr[i].lutime < arr[ri].lutime) ri = i;
-	}
-
-	arr[ri] = page;
-	return REF_MISS;
-}
 
 int main(int argc, char** argv) {
+
+
+
 	char fpath[256];
 	char buf[10];
 	char *bp = buf;
@@ -53,16 +25,14 @@ int main(int argc, char** argv) {
 	int ch;
 	uint hits, refs;
 	
-	if (argc < 2) error("Please provide a page frame size as a parameter.");
 	if (argc > 1) npages = atoi(argv[1]);
 	if (argc > 2) strcpy(fpath, argv[2]);
-	else strcpy(fpath, DEFAULT_FILEPATH);
+	else strcpy(fpath, input.txt);
 
 	PAGE* array = (PAGE*)malloc(npages * sizeof(array));
 	for (int i = 0; i < npages; i++) array[i].pageid = -1;
 
 	fp = fopen(fpath, "r");
-	if (fp == NULL) error("Could not open file.");
 
 	tick = 0;
 	hits = 0;
@@ -84,11 +54,39 @@ int main(int argc, char** argv) {
 				refs++;
 			}
 			break;
-		} else error("Incorrect format.");
+		} 
 			
 	}
 
-	printf("Hit/Miss ratio: %f\n", (float)hits/(refs-hits)); // hit/miss ratio
+	printf("The Hit/Miss ratio is: %f\n", (float)hits/(refs-hits)); // hit/miss ratio
 
+	return 0;
+}
+
+
+
+int handle_ref(PAGE* arr, uint length, uint pageid, uint tick) {
+	PAGE page;
+	page.pageid = pageid;
+	page.lutime = tick;
+	
+	for (int i = 0; i < length; i++) {
+		if (arr[i].pageid == -1) { 
+			arr[i] = page;
+			return 0;
+		}
+
+		if (arr[i].pageid == page.pageid) {
+			arr[i] = page;
+			return 1 ;
+		}
+	}
+
+	int ri = 0;
+	for (int i = 1; i < length; i++) {
+		if (arr[i].lutime < arr[ri].lutime) ri = i;
+	}
+
+	arr[ri] = page;
 	return 0;
 }
