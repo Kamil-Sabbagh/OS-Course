@@ -58,8 +58,8 @@ int main(int argc, char** argv) {
 			
 	}
 
-	printf("The Hit/Miss ratio is: %f\n", (float)hits/(refs-hits)); // hit/miss ratio
-
+	printf("The Hit/Miss ratio is: %f\n", (float)hits/(refs-hits)); // the hit/miss ratio
+	
 	return 0;
 }
 
