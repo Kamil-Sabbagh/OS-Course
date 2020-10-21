@@ -1,0 +1,7 @@
+1.touch ../"week 1"/file.txt
+2.link ../"week 1"/file.txt _ex2.txt
+3.ls -i ../"week 1"/file.txt
+	14829620 ../"week 1"/file.txt
+4.find ../"week 1" -inum 14829620
+	../"week 1"/file.txt
+5. find ../"week 1" -inum 14829620 -exec rm {} \;

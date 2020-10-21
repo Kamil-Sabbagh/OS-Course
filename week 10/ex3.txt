@@ -1,0 +1,15 @@
+1. chmod a=rw _ex3.txt
+2. ls -l _ex3.txt 
+-rw-rw-rw-  1 faritgaleev  staff  0 24 окт 14:09 _ex3.txt
+3. chmod uo=rwx _ex3.txt 
+4. ls -l _ex3.txt 
+-rwxrw-rwx  1 faritgaleev  staff  0 24 окт 14:09 _ex3.txt
+5. chmod g=u _ex3.txt
+6. ls -l _ex3.txt 
+-rwxrwxrwx  1 faritgaleev  staff  0 24 окт 14:09 _ex3.txt
+
+chmod 660 ex3.txt means (-rw-rw----) Owner and Group can read and write file, Other doesn't have rights to interact with file
+
+chmod 775 ex3.txt means (-rwxrwxr-x) Owner and Group can read, write and execute file, Other can only read and execute
+
+chmod 777 ex3.txt (-rwxrwxrwx) Owner, Group and Other have  all permissions to interact with file

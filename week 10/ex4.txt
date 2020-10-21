@@ -1,0 +1,1 @@
+The inode 14832808 has 2 links: link1, file1
