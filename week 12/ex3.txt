@@ -1,7 +1,18 @@
+for the size of 10M 
+ DBUF: 10  bytes ----> sys0m1.620s
+ DBUF: 100 bytes ----> sys0m0.194s
+ DBUF: 512 bytes ----> sys0m0.043s
+
+for the size of 100M
+ DBUF: 10  bytes   -> sys0m16.641s
+ DBUF: 100 bytes   -> sys0m1.852s
+ DBUF: 512 bytes   -> sys0m0.487s 
+
+
+
 first we notice that if we increase  the buffer the time for copying will decrease.
 and decrease buffer size the time for copying will decrease.
-
-also if we add O_SYNC parameter then the Input/output will becomes synchronous ( i.e. copy time will increases )
-
+also if we add O_SYNC parameter then the Input/output will becomes synchronous, the copy time will increases and will get much bigger 
 finally we do the same as in 1 with O_SYNC ,the time will act the same as when without O_SYNC, even though the time it takes to copy will increase to greater values then before.
+it makes huge difference for speed, especially with small buffers.
 

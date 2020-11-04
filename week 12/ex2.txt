@@ -2,7 +2,7 @@ processor	: 0
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
@@ -28,7 +28,7 @@ processor	: 1
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
@@ -54,7 +54,7 @@ processor	: 2
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
@@ -80,7 +80,7 @@ processor	: 3
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
@@ -106,7 +106,7 @@ processor	: 4
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
@@ -132,7 +132,7 @@ processor	: 5
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
@@ -158,7 +158,7 @@ processor	: 6
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
@@ -184,7 +184,7 @@ processor	: 7
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
@@ -210,7 +210,7 @@ processor	: 8
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
@@ -236,7 +236,7 @@ processor	: 9
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
@@ -262,7 +262,7 @@ processor	: 10
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
@@ -288,7 +288,7 @@ processor	: 11
 vendor_id	: AuthenticAMD
 cpu family	: 23
 model		: 1
-model name	: AMD Ryzen 5 1600 Six-Core Processor            
+model name	: Predator Helios 300 Six-Core Processor            
 stepping	: 1
 microcode	: 0xffffffff
 cpu MHz		: 3200.000
