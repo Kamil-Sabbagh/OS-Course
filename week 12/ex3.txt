@@ -1,8 +1,7 @@
-1)If we will increase buffer, time for copying will decrease. in opposite way it will increase by decreasing buffer size
+first we notice that if we increase  the buffer the time for copying will decrease.
+and decrease buffer size the time for copying will decrease.
 
+also if we add O_SYNC parameter then the Input/output will becomes synchronous ( i.e. copy time will increases )
 
-2)If we will add O_SYNC parameter, then our I/O becomes synchronous => copy time increases
-
-
-3)If we will do the same as in 1 with O_SYNC  we can see that the time will act the same as when without O_SYNC, though the time it takes to copy will increase to greater values then before.
+finally we do the same as in 1 with O_SYNC ,the time will act the same as when without O_SYNC, even though the time it takes to copy will increase to greater values then before.
 

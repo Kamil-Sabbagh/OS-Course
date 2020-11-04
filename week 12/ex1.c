@@ -6,16 +6,16 @@
 
 int main(){
 	FILE *random = fopen("/dev/random", "r");
-	char check;
+	char temp;
 	int i = 0;
 	while(i<20){
 	
-	fread(&check,1,1,random);
+	fread(&temp,1,1,random);
 	
-	if((int)check >=33 && (int)check <=127){
-		printf("%c", check);
-		i++;
-	}
+	if( (int)temp > 127 || (int)temp < 33 ) continue ; 
+	printf("%c", temp );
+	i++;
+	   
 	}
 	printf("\n");
 	fclose(random);
