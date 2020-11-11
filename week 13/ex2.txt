@@ -1,13 +1,11 @@
-Deadlock recovery
-Deadlock recovery deals with problems in case of deadlock. The system may kill all the processes that participate in the deadlock, which may not be acceptable for obvious reasons (nobody wants to be killed). Still may be acceptable for stateless devices, such as microservice servers, embedded devices, etc.
+the Deadlock recovery is a method to deal with deadlock problems by killing all the process that are causing said problem, but sometimes this might not be an accepteble aproch since it is killing the whole process.
+but this method is still accepeteble in the case of the embedded devices or some stateless divces.
 
-Deadlock prevention
-Deadlock prevention takes time to check for possible deadlock every time a resource is requested. This may not be acceptable in real-time operating systems as it takes precious clock cycles. This may be acceptable for desktop systems and other non-time sensitive systems.
+the deadlock prevention method first check the possiblity of a deadlock rising. which is slower and not acceptele in the real-time systems since it is checking  every time a resource is being requested.
+but this method might be acceptable for systems that are not time sensitve. 
 
-Deadlock avoidance
-This may happen if some of conditions are not met,
-
-Mutual-Exclusion: spooling resources and exposing a service in another process
-Hold-And-Wait: make all resource requests beforehand
-No-Preemtion: take the resource away from the process
-Circular Wait: every process may be granted access to a resource with number that is greater than number of previously acquainted resources
+Deadlock avoidancem works only when a group of conditions are met
+ 1)Mutual-Exclusion: by spooling the resources and exposing a service in another process
+ 2)Hold-And-Wait: make all resource requests beforehand
+ 3)No-Preemtion: take the resource away from the process
+ 4)Circular Wait: every process may be granted access to a resource with number that is greater than number of       previously acquainted resources

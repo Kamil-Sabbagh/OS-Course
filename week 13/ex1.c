@@ -3,7 +3,7 @@
 int procs;
 int num_res;
 
-void read_from_file(FILE *fp,int procs, int num_res,int E[] ,int A[],int C[][num_res],int R[][num_res]){
+void read(FILE *fp,int procs, int num_res,int E[] ,int A[],int C[][num_res],int R[][num_res]){
 	
 
 	for(int i = 0; i < num_res; i++) fscanf(fp,"%d",&E[i]) ; 
@@ -23,37 +23,35 @@ void read_from_file(FILE *fp,int procs, int num_res,int E[] ,int A[],int C[][num
 	}
 }
 
-void isSafe(FILE *out,int processes[], int available[], int allocation[][num_res], int request[procs][num_res]){
+void ok(FILE *out,int processes[], int available[], int allocation[][num_res], int request[procs][num_res]){
 
-	bool finish[procs];
-
-	for (int i = 0; i < procs ; ++i) finish[i] = 0;
+	bool done[procs];
+	int arr[procs];
+	bool found = false 
 	
-	int safeOrder[procs];
-
-	int work[num_res];
-	for(int i = 0; i < num_res; i++)  work[i] = available[i];
+	memset( arr , 0 , procs );
+	
+	int solve[num_res];
+	for(int i = 0; i < num_res; i++)  solve[i] = available[i];
 	
 	int count = 0;
+	
 	while(count < procs ){
-		bool found = false;
 		for (int i = 0; i < procs ; ++i)
 		{
-			if(finish[i] == 0){
-				int j;
-				for (j = 0; j < num_res; ++j)
-					if(request[i][j] > work[j])
-						break;
-				if(j == num_res){
-					for(int k = 0; k < num_res;k++)
-						work[k] += allocation[i][k];
-					safeOrder[count++] = i;
-
-					finish[i] = 1;
-
-					found = true;
-				}	
-			}		
+		  if(done[i] == 0){
+		  int j = 0 ; 
+		    for ( j =  0 ; j < num_res; ++j)
+			if(request[i][j] > solve[j])
+				break;
+			if(j == num_res){
+			   for(int k = 0; k < num_res;k++)
+					solve[k] += allocation[i][k];
+			arr[count++] = i;
+			done[i] = 1;
+			found = true;
+			}	
+		   }		
 		}
 
 		if ( !found ){
@@ -62,13 +60,9 @@ void isSafe(FILE *out,int processes[], int available[], int allocation[][num_res
 		}
 
 	}
-		fprintf(out,"A safe system sequence of order: \n");
-		for (int i = 0; i < procs ; ++i)
-		{
-			fprintf(out,"%d ",safeOrder[i]);
-		}
-		fprintf(out,"\n");
-
+	fprintf(out,"A safe system sequence of order: \n");
+	for (int i = 0; i < procs ; ++i) fprintf(out,"%d ",arr[i]);
+	fprintf(out,"\n");
 }	
 
 
@@ -97,10 +91,10 @@ int main()
 	{
 		processes[i] = i;
 	}
-	read_from_file(fp_wo,procs , num_res,E,A,C,R);
-	isSafe(out_ok,processes,A,C,R);
+	read(fp_wo,procs , num_res,E,A,C,R);
+	ok(out_ok,processes,A,C,R);
 
-	read_from_file(fp_w, procs, num_res,E,A,C,R);
-	isSafe(out_dl,processes,A,C,R);
+	read(fp_w, procs, num_res,E,A,C,R);
+	ok(out_dl,processes,A,C,R);
 	return 0;
 }
