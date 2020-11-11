@@ -1,0 +1,2 @@
+The sequence of process order that make system safe:
+1 3 4 0 2 
