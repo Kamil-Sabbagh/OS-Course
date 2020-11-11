@@ -1,11 +1,11 @@
-the Deadlock recovery is a method to deal with deadlock problems by killing all the process that are causing said problem, but sometimes this might not be an accepteble aproch since it is killing the whole process.
-but this method is still accepeteble in the case of the embedded devices or some stateless divces.
+the Deadlock recovery is a method to deal with deadlock problems by killing all the process that is causing the said problem, but sometimes this might not be an acceptable approach since it is killing the whole process.
+but this method is still acceptable in the case of embedded devices or some stateless devices.
 
-the deadlock prevention method first check the possiblity of a deadlock rising. which is slower and not acceptele in the real-time systems since it is checking  every time a resource is being requested.
-but this method might be acceptable for systems that are not time sensitve. 
+the deadlock prevention method first checks the possibility of a deadlock arising. which is slower and not acceptable in the real-time systems since it is checking every time a resource is being requested.
+but this method might be acceptable for systems that are not time-sensitive. 
 
-Deadlock avoidancem works only when a group of conditions are met
+Deadlock avoidance works only when a group of conditions are met
  1)Mutual-Exclusion: by spooling the resources and exposing a service in another process
  2)Hold-And-Wait: make all resource requests beforehand
  3)No-Preemtion: take the resource away from the process
- 4)Circular Wait: every process may be granted access to a resource with number that is greater than number of       previously acquainted resources
+ 4)Circular Wait: every process may be granted access to a resource with number that is greater than the number of       previously acquainted resources
